@@ -25,7 +25,10 @@ export interface ConfirmOptions {
   hideCancelButton?: boolean;
   buttonOrder?: string[];
   acknowledgement?: string;
-  acknowledgementFormControlLabelProps?: FormControlLabelProps;
+  acknowledgementFormControlLabelProps?: Omit<
+    FormControlLabelProps,
+    "control" | "label"
+  >;
   acknowledgementCheckboxProps?: CheckboxProps;
 }
 
